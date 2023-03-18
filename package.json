@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test-coveralls": "c8 --src src/ --x coverage/ npm run test",
-    "test": "mocha --recursive --exit --timeout 500000  --require @babel/register tests/**/*.js",
+    "test": "mocha --require @babel/register tests/ --recursive --exit --timeout 80000",
+    "coverage": "nyc npm run test",
     "test:db": " NODE_ENV=test npm run down && npm run migrate:all && mocha --recursive --exit --timeout 500000  --require @babel/register tests/**/*.js",
     "build": "babel src -d dist",
     "start": "NODE_ENV=development nodemon --exec babel-node src/server.js",
