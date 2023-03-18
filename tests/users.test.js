@@ -169,7 +169,7 @@ describe('testing user profile', () => {
 
 describe(' testing changePassword', () => {
   const user = {
-    email: 'john@gmail.com',
+    email: 'edwin12@gmail.com',
     password: '123@Pass',
   };
   // eslint-disable-next-line no-shadow
@@ -181,6 +181,7 @@ describe(' testing changePassword', () => {
       .post('/users/login')
       .send({ email: user.email, password: user.password })
       .end((error, res) => {
+        console.log(res.body);
         token = res.body.token;
         done();
       });
@@ -193,6 +194,7 @@ describe(' testing changePassword', () => {
       .set('Authorization', `Bearer ${token}`)
       .send({ oldPassword: 'wrongpassword', newPassword: 'Newp@ssword123' })
       .end((error, res) => {
+        console.log(res.body);
         chai.expect(res).to.have.status(401);
         chai.expect(res.body.message).to.equal('Incorrect old password');
         done();
