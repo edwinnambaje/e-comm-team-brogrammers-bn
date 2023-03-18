@@ -4,7 +4,7 @@
 
 [![HoundCI](https://img.shields.io/badge/houndci-checked-brightgreen.svg)](https://houndci.com)
 
-[![Coverage Status](https://coveralls.io/repos/github/atlp-rwanda/e-comm-team-brogrammers-bn/badge.svg?branch=develop)](https://coveralls.io/github/atlp-rwanda/e-comm-team-brogrammers-bn?branch=develop)
+[![Coverage Status](https://coveralls.io/repos/github/edwinnambaje/e-comm-team-brogrammers-bn/badge.svg?branch=develop)](https://coveralls.io/github/edwinnambaje/e-comm-team-brogrammers-bn?branch=develop)
 
 ### How can I test this project
 
